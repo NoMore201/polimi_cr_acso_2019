@@ -6,12 +6,6 @@
 #include <string.h>
 
 
-void custom_alarm( int seconds ) {
-    // sleep per 10 secondi
-    sleep(seconds);
-    kill(getpid(), SIGALRM);
-}
-
 void alarm_handler( int sig ) {
     if (sig == SIGALRM) {
         printf( "Allarme ricevuto, sono passati 10 secondi\n" );
@@ -32,7 +26,7 @@ int main() {
     } 
 
     printf( "Ho impostato l'allarme, scatterà tra 10 secondi\n" );
-    custom_alarm( 10 ); 
+    alarm(10); 
 
     while(1);
 

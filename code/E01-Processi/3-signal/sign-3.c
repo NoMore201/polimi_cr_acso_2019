@@ -8,8 +8,8 @@ void signal_handler(int sig) {
     int status;
     pid_t pid;
 
-    // Waitpid non bloccante, che attende qualunque processo (primo parametro è zero)
-    pid = waitpid(0, &status, WNOHANG);
+    // Waitpid non bloccante, che attende qualunque processo (primo parametro è -1)
+    pid = waitpid(-1, &status, WNOHANG);
     printf("Sono l'handler, è arrivato il figlio pid: %d, exit status: %d. Esco\n",
             pid, WEXITSTATUS(status));
     exit(0);
