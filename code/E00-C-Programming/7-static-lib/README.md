@@ -6,13 +6,20 @@ Compilare la shared library:
 
 Compilare il programma specificando la libreria:
 
-    $ gcc -o main -L. -lsample main.c
+    $ gcc -o main main.c -L. -lsample
+
+*N.B.* in sistemi debian-based (ubuntu, linux mint ..) è necessario
+specificare i parametri relativi alle shared libraries dopo i file sorgenti che
+dipendono da tale libreria
 
 - `-L.` indica al compilatore di aggiungere la directory
-corrente alle directory in cui cercare le librerie
+corrente alle directory in cui cercare le librerie shared
 - `-lsample` indica al compilatore di utilizzare la libreria
 lib*sample*.so in fase di linking
 
 Eseguire il programma:
 
     $ LD_PRELOAD=./libsample.so ./main
+
+- `LD_PRELOAD` è una variabile d'ambiente utilizzata per specificare il path
+di una o più librerie, quando queste si trovano in directory non standard.
