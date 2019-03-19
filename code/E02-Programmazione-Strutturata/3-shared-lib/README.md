@@ -14,8 +14,8 @@ dipendono da tale libreria
 
 - `-L.` indica al compilatore di aggiungere la directory
 corrente alle directory in cui cercare le librerie shared
-- `-lsample` indica al compilatore di utilizzare la libreria
-lib*sample*.so in fase di linking
+- `-lsample` indica al compilatore di linkare la libreria
+lib*sample*.so che verra caricata durante lo startup
 
 Eseguire il programma:
 
