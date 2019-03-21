@@ -19,7 +19,7 @@ lib*sample*.so che verra caricata durante lo startup
 
 Eseguire il programma:
 
-    $ LD_PRELOAD=./libsample.so ./main
+    $ LD_LIBRARY_PATH=. ./main
 
-- `LD_PRELOAD` è una variabile d'ambiente utilizzata per specificare il path
-di una o più librerie, quando queste si trovano in directory non standard.
+- `LD_LIBRARY_PATH` è una variabile d'ambiente utilizzata per indicare al compilatore
+una lista di directory dove trovare le shared libraries
