@@ -1,4 +1,14 @@
+#-----------------------------------------------------------
+# Program    : for.asm
+# Written by : Domenico Iezzi
+# Date       : 26/03/2019
+# Description: For statement
+#-----------------------------------------------------------
+
+# DATA Segment
 	.data
+
+# TEXT Segment
 	.text
 	addi	$s0, $zero, 1
 init:	add 	$s1, $zero, $zero
